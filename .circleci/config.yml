@@ -20,14 +20,14 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
-  test:
-    parallelism: 3
-    docker:
-      - image: cimg/ruby:2.7.2-node
-    steps:
-      - run:
-        name: test suite
-        command: rspec
+  # test:
+  #   parallelism: 3
+  #   docker:
+  #     - image: cimg/ruby:2.7.2-node
+  #   steps:
+  #     - run:
+  #       name: test suite
+  #       command: rspec
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
