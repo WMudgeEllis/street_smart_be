@@ -20,6 +20,12 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
+  migrate:
+    executor: my-custom-executor
+    steps:
+      - checkout
+      - run: |
+          rails db:{create,migrate}
   # test:
   #   parallelism: 3
   #   docker:
