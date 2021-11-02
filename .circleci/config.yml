@@ -21,6 +21,7 @@ jobs:
           command: bundle -v
       - ruby/bundle-install
   test:
+    parallelism: 3
     docker:
       - image: cimg/ruby:2.7.2-node
     steps:
