@@ -12,13 +12,13 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7.2-stretch-node
+      - image: cimg/ruby:2.7-node
     executor: ruby/default
     steps:
       - checkout
       - run:
           name: Which bundler?
-          command: gem install bundler:2.2.24
+          command: bundle -v
       - ruby/bundle-install
 
 # Invoke jobs via workflows
