@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           name: Which bundler?
-          command: bundle -v
+          command: gem install bundler:2.2.24
       - ruby/bundle-install
 
 # Invoke jobs via workflows
