@@ -22,3 +22,24 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* hazard hash structure ```
+
+  {
+    data: [
+      {
+        id: string,
+        type: string,
+        attributes: {
+          title: string,
+          description: string,
+          type: string,
+          longitude: string,
+          latitude: string,
+          user_id: integer
+        }
+      }
+    ]
+  }
+
+  ```
