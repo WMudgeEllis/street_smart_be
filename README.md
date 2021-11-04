@@ -122,7 +122,7 @@ status 201, response:
       type: string,
       longitude: string,
       latitude: string,
-      category: string,
+      category: integer,
       user_id: integer,           
       created_at: datetime
       vote: {
