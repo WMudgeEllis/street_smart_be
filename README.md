@@ -2,7 +2,9 @@
 
 This is the back end repository for the project street smart. The front repo is [here](https://github.com/WMudgeEllis/street_smart_fe). This repository is responsible for storing and serving data to the front end which then presents the information. This follows json api format. 
 
-The base url for the production server is 'https://street-smart-fe.herokuapp.com/'
+The api c
+
+The base url for the production server is https://street-smart-fe.herokuapp.com
 
 * Ruby version
 
