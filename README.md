@@ -4,7 +4,11 @@ This is the back end repository for the project street smart. The front repo is 
 
 The api c
 
-The base url for the production server is https://street-smart-fe.herokuapp.com
+The base url for the production server is https://street-smart-be.herokuapp.com
+
+
+schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubusercontent.com/84806907/140391938-a9eb5abd-db83-4c5e-a295-b6ea2c230f65.png)
+
 
 * Ruby version
 
