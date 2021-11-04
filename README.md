@@ -1,11 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the back end repository for the project street smart. The front repo is [here](https://github.com/WMudgeEllis/street_smart_fe). This repository is responsible for storing and serving data to the front end which then presents the information. This follows json api format. 
 
-Things you may want to cover:
+The base url for the production server is 'https://street-smart-fe.herokuapp.com/'
 
 * Ruby version
+
+  Ruby 2.7.2
 
 * System dependencies
 
@@ -160,4 +161,36 @@ status 201, response:
   }
 ```
 
-*
+* patch api/v1/votes/:id
+
+send in param whether it was an upvote or down vote:
+
+```
+{
+  id: string,
+  upvote: true
+}
+```
+
+or:
+
+```
+{
+  id: string,
+  upvote: true
+}
+```
+
+response:
+
+```
+{
+  id: string,
+  type: vote,
+  attributes: {
+    id: string,
+    upvotes: integer,
+    downvotes: integer
+  {
+}
+```
