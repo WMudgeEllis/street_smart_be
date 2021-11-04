@@ -21,10 +21,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* get api/v1/hazards
 
-* hazard hash structure ```
-
+```
   {
     data: [
       {
@@ -36,10 +35,103 @@ Things you may want to cover:
           type: string,
           longitude: string,
           latitude: string,
-          user_id: integer
+          category: string,
+          user_id: integer,           
+          created_at: datetime
+          vote: {
+            id: string,
+            type: vote,
+            attributes: {
+              upvote: integer,
+              downvote: integer
+            }
+          }
         }
       }
     ]
   }
+```
 
-  ```
+* get api/v1/hazards/:id
+
+```
+  {
+    data:
+    {
+      id: string,
+      type: string,
+      attributes: {
+        title: string,
+        description: string,
+        type: string,
+        longitude: string,
+        latitude: string,
+        category: string,
+        user_id: integer,          
+        created_at: datetime
+        vote: {
+          id: string,
+          type: vote,
+          attributes: {
+            upvote: integer,
+            downvote: integer
+          }
+        }
+      }
+    }
+  }
+```
+
+* delete api/v1/hazards/:id
+
+status 204, response:
+
+```
+  {
+    data: {}
+  }
+```
+* post api/v1/hazards
+
+  Pass in hazard user id, title, description, latitude, and longitude as parameters. Description is optional, the others are required:
+
+```
+  {
+    title: string,
+    description: string,
+    latitude: string,
+    longitude: string,
+    category: string,
+    user_id: integer
+  }
+```
+
+status 201, response:
+
+```
+{
+  data:
+  {
+    id: string,
+    type: string,
+    attributes: {
+      title: string,
+      description: string,
+      type: string,
+      longitude: string,
+      latitude: string,
+      category: string,
+      user_id: integer,           
+      created_at: datetime
+      vote: {
+        id: string,
+        type: vote,
+        attributes: {
+          upvote: integer,
+          downvote: integer
+        }
+      }
+    }
+  }
+}
+```
