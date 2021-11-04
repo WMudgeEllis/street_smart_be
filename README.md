@@ -47,7 +47,7 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
           category: string,
           user_id: integer,           
           created_at: datetime
-          vote: {
+          vote_data: {
             id: string,
             type: vote,
             attributes: {
