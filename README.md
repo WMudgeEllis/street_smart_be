@@ -23,8 +23,9 @@ Things you may want to cover:
 
 * ...
 
-* hazard hash structure ```
-
+* hazard hash structure 
+ 
+ ```
   {
     data: [
       {
@@ -41,5 +42,4 @@ Things you may want to cover:
       }
     ]
   }
-
-  ```
+ ```
