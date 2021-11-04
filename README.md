@@ -103,7 +103,7 @@ status 204, response:
     description: string,
     latitude: string,
     longitude: string,
-    category: string,
+    category: integer,
     user_id: integer
   }
 ```
@@ -122,7 +122,7 @@ status 201, response:
       type: string,
       longitude: string,
       latitude: string,
-      category: integer,
+      category: string,
       user_id: integer,           
       created_at: datetime
       vote: {
