@@ -24,6 +24,7 @@ Things you may want to cover:
 * get api/v1/hazards
 
 ```
+
   {
     data: [
       {
@@ -50,6 +51,7 @@ Things you may want to cover:
       }
     ]
   }
+
 ```
 
 * get api/v1/hazards/:id
