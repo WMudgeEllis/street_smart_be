@@ -23,13 +23,14 @@ Things you may want to cover:
 
 * get api/v1/hazards
 
-```
+  Hazards will be filtered by proximity to current location. Exact distance tbd.
 
+```
   {
     data: [
       {
         id: string,
-        type: string,
+        type: 'hazard',
         attributes: {
           title: string,
           description: string,
@@ -61,7 +62,7 @@ Things you may want to cover:
     data:
     {
       id: string,
-      type: string,
+      type: 'hazard',
       attributes: {
         title: string,
         description: string,
@@ -115,7 +116,7 @@ status 201, response:
   data:
   {
     id: string,
-    type: string,
+    type: 'hazard',
     attributes: {
       title: string,
       description: string,
@@ -137,3 +138,26 @@ status 201, response:
   }
 }
 ```
+
+* post api/v1/users
+
+  When creating a new user, send user id as a parameter:
+
+```
+  {
+    id: string
+  }
+```
+
+  status 201, response:
+
+```
+  {
+    data: {
+      id: string,
+      type: user
+    }
+  }
+```
+
+*
