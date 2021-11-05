@@ -1,21 +1,19 @@
 require 'rails_helper'
 
-describe 'Hazards Requests', type: :request do
-  describe 'GET /api/v1/hazards' do
+describe 'Hazard Requests', type: :request do
+  describe 'GET /api/v1/hazards/:id' do
     before :each do
       @user1 = create(:user)
-      @hazards = create_list(:hazard, 20, user: @user1)
-      @hazards.each do |hazard|
-        create(:vote, upvote: 0, downvote: 0, hazard: hazard)
-      end
+      @hazard1 = create(:hazard, user: @user1)
+      create(:vote, hazard: @hazard1)
     end
 
-    it 'returns all hazards' do
-      get '/api/v1/hazards'
+    it 'returns hazard based on id' do
+      get "/api/v1/hazards/#{@hazard1.id}"
 
       expect(response).to be_successful
       response_body = JSON.parse(response.body, symbolize_names: true)
-      hazard = response_body[:data].first
+      hazard = response_body[:data]
       expect(hazard[:id].scan('/\D/').empty?).to eq(true)
       expect(hazard[:attributes][:title].scan('/\./').empty?).to eq(true)
       expect(hazard[:attributes][:description].scan('/\./').empty?).to eq(true)
@@ -25,7 +23,7 @@ describe 'Hazards Requests', type: :request do
       expect(hazard[:attributes][:user_id].scan('/\D/').empty?).to eq(true)
       expect(hazard[:attributes][:vote_data][:upvote].scan('/\D/').empty?).to eq(true)
       expect(hazard[:attributes][:vote_data][:downvote].scan('/\D/').empty?).to eq(true)
-      expect(response_body[:data].length).to eq(20)
+      expect(response_body.length).to eq(1)
     end
   end
 end
