@@ -25,5 +25,12 @@ describe 'Hazard Requests', type: :request do
       expect(hazard[:attributes][:vote_data][:downvote].scan('/\D/').empty?).to eq(true)
       expect(response_body.length).to eq(1)
     end
+
+    it 'returns 404 if the id is invalid' do
+      get "/api/v1/hazards/1"
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+    end
   end
 end
