@@ -1,6 +1,9 @@
-class Api::V1::HazardSerializer < ActiveModel::Serializer
-  has_one :vote, serializer: Api::V1::VoteSerializer
-  belongs_to :user
+class Api::V1::HazardSerializer
+  include FastJsonapi::ObjectSerializer
 
-  attributes :id, :title, :description, :longitude, :latitude, :category
+  attributes :title, :description, :longitude, :latitude, :category, :vote_data
+
+  attribute :user_id do |object|
+    "#{object.user.id}"
+  end
 end
