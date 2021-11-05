@@ -13,6 +13,8 @@ class Api::V1::HazardsController < ApplicationController
     hazard.vote_data = { upvote: hazard.vote.upvote.to_s, downvote: hazard.vote.downvote.to_s }
     hazard = Api::V1::HazardSerializer.new(hazard)
     render json: hazard
+  rescue ActiveRecord::RecordNotFound
+    render json: 404, status: 404
   end
 
   def create
@@ -27,6 +29,14 @@ class Api::V1::HazardsController < ApplicationController
     else
       render json: 404, status: 404
     end
+  end
+
+  def destroy
+    hazard = Hazard.find(params[:id])
+    hazard.destroy
+
+  rescue ActiveRecord::RecordNotFound
+    render json: 404, status: 404
   end
 
   private

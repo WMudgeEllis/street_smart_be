@@ -27,5 +27,7 @@ describe 'Hazards Requests', type: :request do
       expect(hazard[:attributes][:vote_data][:downvote].scan('/\D/').empty?).to eq(true)
       expect(response_body[:data].length).to eq(20)
     end
+
+    # Sad path if Bad tests will change
   end
 end
