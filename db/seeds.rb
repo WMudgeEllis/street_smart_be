@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.create!
+
+hazard = user.hazards.create!(title: "Cheyenne, Wyoming", description: "Je suis comme je suis", longitude: "41.1400", latitude: "-104.8202", category: 0)
+hazard2 = user.hazards.create!(title: "North Pole, Alaska", description: "Je suis fait comme ça", longitude: "64.7511", latitude: "-147.3494", category: 1)
+hazard3 = user.hazards.create!(title: "Parking Lot", description: "is super sketch", longitude: "41.137859", latitude: "-104.766779", category: 1)
+hazard4 = user.hazards.create!(title: "Big 'ol pothole", description: "Like SUPER big", longitude: "41.143200", latitude: "-104.772970", category: 1)
+
+Vote.create!(hazard_id: hazard.id, upvote: 10, downvote: 1)
+Vote.create!(hazard_id: hazard2.id, upvote: 10, downvote: 1)
+Vote.create!(hazard_id: hazard3.id, upvote: 10, downvote: 1)
+Vote.create!(hazard_id: hazard4.id, upvote: 10, downvote: 1)
