@@ -19,3 +19,7 @@ Vote.create!(hazard_id: hazard.id, upvote: 10, downvote: 1)
 Vote.create!(hazard_id: hazard2.id, upvote: 10, downvote: 1)
 Vote.create!(hazard_id: hazard3.id, upvote: 10, downvote: 1)
 Vote.create!(hazard_id: hazard4.id, upvote: 10, downvote: 1)
+
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
