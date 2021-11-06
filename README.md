@@ -185,7 +185,7 @@ or:
 ```
 {
   id: string,
-  upvote: true
+  downvote: true
 }
 ```
 
