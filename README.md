@@ -169,14 +169,14 @@ status 201, response:
   }
 ```
 
-* patch api/v1/votes/:id
+* put api/v1/votes/:id
 
 send in param whether it was an upvote or down vote:
 
 ```
 {
   id: string,
-  upvote: true
+  upvote: integer
 }
 ```
 
@@ -185,23 +185,13 @@ or:
 ```
 {
   id: string,
-  downvote: true
+  downvote: integer
 }
 ```
 
-response:
+response 204, no content:
 
-```
-{
-  id: string,
-  type: vote,
-  attributes: {
-    id: string,
-    upvotes: integer,
-    downvotes: integer
-  {
-}
-```
+
 
 
 * delete /api/v1/hazards/:id
