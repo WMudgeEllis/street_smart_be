@@ -9,6 +9,10 @@ Vote.destroy_all
 Hazard.destroy_all
 User.destroy_all
 
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
+
 user = User.create!
 hazard = user.hazards.create!(title: "Cheyenne, Wyoming", description: "Je suis comme je suis", latitude: "41.1400", longitude: "-104.8202", category: 0)
 hazard2 = user.hazards.create!(title: "North Pole, Alaska", description: "Je suis fait comme ça", latitude: "64.7511", longitude: "-147.3494", category: 1)
