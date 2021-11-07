@@ -47,7 +47,7 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
           longitude: string,
           latitude: string,
           category: string,
-          user_id: integer,           
+          user_email: string,           
           created_at: datetime
           vote_data: {
             id: string,
@@ -79,7 +79,7 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
         longitude: string,
         latitude: string,
         category: string,
-        user_id: integer,          
+        user_email: string,          
         created_at: datetime
         vote: {
           id: string,
@@ -114,7 +114,7 @@ status 204, response:
     latitude: string,
     longitude: string,
     category: integer,
-    user_id: integer
+    user_email: string
   }
 ```
 
@@ -133,15 +133,15 @@ status 201, response:
       longitude: string,
       latitude: string,
       category: string,
-      user_id: integer,           
-      created_at: datetime
+      user_email: string,           
+      created_at: datetime      
       vote: {
         id: string,
         type: vote,
         attributes: {
           upvote: integer,
           downvote: integer
-        }
+        }       
       }
     }
   }
@@ -209,4 +209,16 @@ response
   description: string
 {
 
+ * post /api/v1/users
+
+  User email will be sent in the params.
   
+  status 201, response:
+  
+  ```
+  {
+    data: {
+      user_email: string
+    }
+  }
+  ```
