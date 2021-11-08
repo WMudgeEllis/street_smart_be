@@ -3,7 +3,7 @@ class Api::V1::HazardSerializer
 
   attributes :title, :description, :longitude, :latitude, :category, :vote_data
 
-  attribute :user_id do |object|
-    "#{object.user.id}"
+  attribute :user_email do |object|
+    "#{object.user.email}"
   end
 end
