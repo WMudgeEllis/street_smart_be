@@ -13,7 +13,7 @@ ActiveRecord::Base.connection.tables.each do |t|
   ActiveRecord::Base.connection.reset_pk_sequence!(t)
 end
 
-user1 = User.create(email: 'ellisweston112@gmail.com')
+user1 = User.create(email: 'admin@admin.com')
 user2= User.create(email: 'bummer@bummmer.com')
 hazard1 = user1.hazards.create!(title: "Cheyenne, Wyoming", description: "Je suis comme je suis", latitude: "41.1400", longitude: "-104.8202", category: 0)
 hazard2 = user1.hazards.create!(title: "North Pole, Alaska", description: "Je suis fait comme ça", latitude: "64.7511", longitude: "-147.3494", category: 1)
