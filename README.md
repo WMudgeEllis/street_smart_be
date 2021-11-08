@@ -12,9 +12,11 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 
 * Ruby version
 
-  Ruby 2.7.2
+  Ruby 2.7.2, Rails 5.2.6
 
-* System dependencies
+* Gems used:
+
+  [figaro](https://github.com/laserlemon/figaro), [fast_jsonapi](https://github.com/Netflix/fast_jsonapi), [faraday](https://lostisland.github.io/faraday/), [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers), [pry](https://github.com/pry/pry), [simplecov](https://github.com/simplecov-ruby/simplecov), [factory_bot](https://github.com/thoughtbot/factory_bot), [faker](https://github.com/faker-ruby/faker), [webmock](https://github.com/bblimke/webmock), [vcr](https://github.com/vcr/vcr), [geo-kit](https://github.com/geokit/geokit-rails)
 
 * Configuration
 
@@ -45,7 +47,7 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
           longitude: string,
           latitude: string,
           category: string,
-          user_id: integer,           
+          user_email: string,           
           created_at: datetime
           vote_data: {
             id: string,
@@ -77,7 +79,7 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
         longitude: string,
         latitude: string,
         category: string,
-        user_id: integer,          
+        user_email: string,          
         created_at: datetime
         vote: {
           id: string,
@@ -112,7 +114,7 @@ status 204, response:
     latitude: string,
     longitude: string,
     category: integer,
-    user_id: integer
+    user_email: string
   }
 ```
 
@@ -131,15 +133,15 @@ status 201, response:
       longitude: string,
       latitude: string,
       category: string,
-      user_id: integer,           
-      created_at: datetime
+      user_email: string,           
+      created_at: datetime      
       vote: {
         id: string,
         type: vote,
         attributes: {
           upvote: integer,
           downvote: integer
-        }
+        }       
       }
     }
   }
@@ -167,14 +169,14 @@ status 201, response:
   }
 ```
 
-* patch api/v1/votes/:id
+* put api/v1/votes/:id
 
 send in param whether it was an upvote or down vote:
 
 ```
 {
   id: string,
-  upvote: true
+  upvote: integer
 }
 ```
 
@@ -183,25 +185,40 @@ or:
 ```
 {
   id: string,
-  upvote: true
+  downvote: integer
 }
 ```
 
-response:
+response 204, no content:
 
-```
-{
-  id: string,
-  type: vote,
-  attributes: {
-    id: string,
-    upvotes: integer,
-    downvotes: integer
-  {
-}
-```
+
 
 
 * delete /api/v1/hazards/:id
 
   There will be no response, but the status will be 204
+  
+* get /api/v1/walkscore
+
+  requires ip address as a parameter
+
+response 
+
+{
+  walkscore: integer,
+  description: string
+{
+
+ * post /api/v1/users
+
+  User email will be sent in the params.
+  
+  status 201, response:
+  
+  ```
+  {
+    data: {
+      user_email: string
+    }
+  }
+  ```

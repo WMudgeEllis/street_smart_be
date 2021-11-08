@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :hazards
       get '/walkscore', to: 'score#index'
+      resources :votes, only: :update
+      post 'users', to: 'users#create'
     end
   end
 end
