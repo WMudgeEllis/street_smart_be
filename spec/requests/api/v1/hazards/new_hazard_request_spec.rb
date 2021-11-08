@@ -34,7 +34,7 @@ describe 'New Hazard Request', type: :request do
       expect(hazard[:attributes][:category].scan('/\./').empty?).to eq(true)
       expect(hazard[:attributes][:longitude]).to be_a(Float)
       expect(hazard[:attributes][:latitude]).to be_a(Float)
-      expect(hazard[:attributes][:user_id].scan('/\D/').empty?).to eq(true)
+      expect(hazard[:attributes][:user_email].scan('/\./').empty?).to eq(true)
       expect(hazard[:attributes][:vote_data][:upvote].scan('/\D/').empty?).to eq(true)
       expect(hazard[:attributes][:vote_data][:downvote].scan('/\D/').empty?).to eq(true)
     end
