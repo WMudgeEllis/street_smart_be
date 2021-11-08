@@ -3,7 +3,7 @@ FactoryBot.define do
     title { Faker::Company.name }
     description { Faker::Company.buzzword }
     category { 1 }
-    longitude { Faker::Number.decimal(l_digits: 2, r_digits: 4) }
-    latitude { Faker::Number.decimal(l_digits: 2, r_digits: 4) }
+    longitude { Faker::Address.longitude }
+    latitude { Faker::Address.latitude }
   end
 end

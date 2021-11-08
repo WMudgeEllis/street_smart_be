@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :hazards
       resources :votes, only: :update
+      post 'users', to: 'users#create'
     end
   end
 end
