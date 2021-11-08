@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ipinfo.io/69.132.37.48/geo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 08 Nov 2021 23:19:18 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '2'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 google
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "ip": "69.132.37.48",
+          "hostname": "cpe-69-132-37-48.carolina.res.rr.com",
+          "city": "Charlotte",
+          "region": "North Carolina",
+          "country": "US",
+          "loc": "35.1677,-80.7932",
+          "org": "AS11426 Charter Communications Inc",
+          "postal": "28211",
+          "timezone": "America/New_York",
+          "readme": "https://ipinfo.io/missingauth"
+        }
+  recorded_at: Mon, 08 Nov 2021 23:19:18 GMT
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/reverse?accept-language=en&addressdetails=1&format=json&lat=35.1677&lon=-80.7932
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 08 Nov 2021 23:19:19 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwbGFjZV9pZCI6MjkyODExMjcyLCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6MTY3MTI1MTcsImxhdCI6IjM1LjE2NzEyMjQ0OTkwNDUyNSIsImxvbiI6Ii04MC43OTMwNzM4OTcyNDY1NCIsImRpc3BsYXlfbmFtZSI6IjE3OSwgV29uZGVyd29vZCBEcml2ZSwgU2hlcndvb2QgRm9yZXN0LCBDaGFybG90dGUsIE1lY2tsZW5idXJnIENvdW50eSwgTm9ydGggQ2Fyb2xpbmEsIDI4MjExLCBVbml0ZWQgU3RhdGVzIiwiYWRkcmVzcyI6eyJob3VzZV9udW1iZXIiOiIxNzkiLCJyb2FkIjoiV29uZGVyd29vZCBEcml2ZSIsInN1YnVyYiI6IlNoZXJ3b29kIEZvcmVzdCIsImNpdHkiOiJDaGFybG90dGUiLCJjb3VudHkiOiJNZWNrbGVuYnVyZyBDb3VudHkiLCJzdGF0ZSI6Ik5vcnRoIENhcm9saW5hIiwicG9zdGNvZGUiOiIyODIxMSIsImNvdW50cnkiOiJVbml0ZWQgU3RhdGVzIiwiY291bnRyeV9jb2RlIjoidXMifSwiYm91bmRpbmdib3giOlsiMzUuMTY3MDcyNDQ5OTA1IiwiMzUuMTY3MTcyNDQ5OTA1IiwiLTgwLjc5MzEyMzg5NzI0NyIsIi04MC43OTMwMjM4OTcyNDciXX0=
+  recorded_at: Mon, 08 Nov 2021 23:19:19 GMT
+- request:
+    method: get
+    uri: https://api.walkscore.com/score?address=179%20Wonderwood%20Drive%20Charlotte%20North%20Carolina%2028211&format=json&lat=35.1677&lon=-80.7932&wsapikey=<api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Tue, 09 Nov 2021 23:19:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Cloud-Trace-Context:
+      - a483ef79349c518c73ac803c85116833
+      Date:
+      - Mon, 08 Nov 2021 23:19:19 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '605'
+    body:
+      encoding: UTF-8
+      string: "{\n\"status\": 1  \n, \"walkscore\": 19\n, \"description\": \"Car-Dependent\"\n,
+        \"updated\": \"2021-06-20 18:46:13.228830\" \n, \"logo_url\": \"https://cdn.walk.sc/images/api-logo.png\"\n,
+        \"more_info_icon\": \"https://cdn.walk.sc/images/api-more-info.gif\"\n, \"more_info_link\":
+        \"https://www.redfin.com/how-walk-score-works\"\n, \"ws_link\": \"https://www.walkscore.com/score/179-Wonderwood-Drive-Charlotte-North-Carolina-28211/lat=35.1677/lng=-80.7932/?utm_source=idaolson.com&utm_medium=ws_api&utm_campaign=ws_api\"\n,
+        \"help_link\": \"https://www.redfin.com/how-walk-score-works\"\n, \"snapped_lat\":
+        35.1675\n, \"snapped_lon\": -80.7930 \n\n\n\n\n\n}"
+  recorded_at: Mon, 08 Nov 2021 23:19:19 GMT
+recorded_with: VCR 6.0.0
