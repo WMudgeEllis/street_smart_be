@@ -1,8 +1,8 @@
 class WalkScoreService
   class << self
 
-    def walk_score_by_location(params)
-      url = "?format=json&lat=#{params[:latitude]}&lon=#{params[:longitude]}&address=#{params[:address]}"
+    def walk_score_by_location(attrs)
+      url = "?format=json&lat=#{attrs[:latitude]}&lon=#{attrs[:longitude]}&address=#{attrs[:address]}"
       WalkScoreClient.fetch(url)
     end
   end
