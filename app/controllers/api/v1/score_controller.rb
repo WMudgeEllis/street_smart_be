@@ -1,17 +1,22 @@
 class Api::V1::ScoreController < ApplicationController
-  # before_action :
 
   def index
-    # ScoreFacade.walk_safety_info(attrs)
-    attrs
+    score = ScoreFacade.walk_safety_info(attrs)
+    render json: 
   end
 
 
   private
   def attrs
-    # require "pry"; binding.pry
     locations = Geocoder.search(params[:ip])
-    require "pry"; binding.pry
     coords = locations.first.coordinates
+    addresses = Geocoder.search(coords)
+    addr_hash = addresses.first.data['address']
+    current_address = "#{addr_hash['house_number']}%20#{addr_hash['road']}%20#{addr_hash['city']}%20#{addr_hash['state']}%20#{addr_hash['postcode']}"
+    {
+      latitude: coords[0],
+      longitude: coords[1],
+      address: current_address
+    }
   end
 end
