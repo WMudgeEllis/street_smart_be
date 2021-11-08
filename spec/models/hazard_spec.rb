@@ -8,13 +8,18 @@ RSpec.describe Hazard do
 
   describe 'class methods' do
     describe '#nearest_hazards(current_location, limit)' do
-      @user1 = create(:user)
-      @user2 = create(:user)
-      @user1_hazards = create_list(10, :hazard, user: @user1)
-      @user2_hazards = create_list(10, :hazard, user: @user2)
-      @current_location = [39.5296,119.8138]
+      before :each do
+        @user1 = create(:user)
+        @user2 = create(:user)
+        @hzrd1 = @user1.hazards.create(title: 'man eating a hotdog', description: 'it had peanut butter on it', category: 'animate', latitude: 39.618818, longitude: -119.765702)
+        @hzrd2 = @user2.hazards.create(title: 'man eating a hotdog', description: 'it had peanut butter on it', category: 'animate', latitude: 39.618820, longitude: -119.765721)
+        @hzrd3 = @user2.hazards.create(title: 'man eating a hotdog', description: 'it had peanut butter on it', category: 'animate', latitude: 39.618820, longitude: -119.765734)
+        @current_location = [39.618818, -119.765702]
+      end
 
-      expect()
+      it 'can return within a range' do
+        expect(Hazard.nearest_hazards(@current_location, 50)).to eq([@hzrd1, @hzrd2, @hzrd3])
+      end
     end
   end
 end

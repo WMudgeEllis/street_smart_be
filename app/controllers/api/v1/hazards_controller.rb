@@ -1,6 +1,7 @@
 class Api::V1::HazardsController < ApplicationController
   def index
-    hazards = Hazard.all
+    # current_location = function
+    hazards = Hazard.nearest_hazards(current_location)
     hazards.each do |hazard|
       hazard.vote_data = { upvote: hazard.vote.upvote.to_s, downvote: hazard.vote.downvote.to_s }
     end

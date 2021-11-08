@@ -6,12 +6,13 @@ class Hazard < ApplicationRecord
 
   validates_presence_of :title, :description, :category, :latitude, :longitude, :user_id
 
-  acts_as_mappable
+  acts_as_mappable :lat_column_name => :latitude,
+                   :lng_column_name => :longitude
 
   enum category: %i[inanimate animate]
 
-
-  def self.nearest_hazards(current_location, limit)
-    self.within(50, origin: :current_location)
+  def self.nearest_hazards(current_location, area = 10)
+    Hazard.within(area, origin: current_location).all
   end
+
 end
