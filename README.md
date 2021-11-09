@@ -30,6 +30,8 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 
 * Deployment instructions
 
+### API Endpoints
+
 * get api/v1/hazards
 
   Hazards will be filtered by proximity to current location. Exact distance tbd.
