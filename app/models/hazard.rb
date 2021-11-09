@@ -11,7 +11,7 @@ class Hazard < ApplicationRecord
 
   enum category: %i[inanimate animate]
 
-  def self.nearest_hazards(current_location, area = 10)
+  def self.nearest_hazards(current_location, area = 50)
     Hazard.within(area, origin: current_location).all
   end
 

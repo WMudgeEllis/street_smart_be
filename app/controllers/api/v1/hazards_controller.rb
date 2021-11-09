@@ -1,8 +1,6 @@
 class Api::V1::HazardsController < ApplicationController
   def index
-    # current_location = function
-    # hazards = Hazard.nearest_hazards(current_location)
-    hazards = Hazard.all
+    hazards = Hazard.nearest_hazards(ip_to_coords)
     hazards.each do |hazard|
       hazard.vote_data = { upvote: hazard.vote.upvote.to_s, downvote: hazard.vote.downvote.to_s }
     end
@@ -46,4 +44,12 @@ class Api::V1::HazardsController < ApplicationController
   def hazard_params
     params.permit(:title, :description, :category, :latitude, :longitude, :user_id)
   end
+
+  def ip_to_coords
+    location = Geocoder.search(params[:ip])
+    location = location.first.data["loc"]
+    location = location.split(',')
+    location.map { |coord| coord.to_f }
+  end
+
 end

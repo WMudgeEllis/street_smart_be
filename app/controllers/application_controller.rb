@@ -1,3 +1,3 @@
 class ApplicationController < ActionController::API
-  geocode_ip_address
+  # geocode_ip_address
 end
