@@ -189,14 +189,11 @@ or:
 }
 ```
 
-response 204, no content:
-
-
-
-
 * delete /api/v1/hazards/:id
 
-  There will be no response, but the status will be 204
+ ```
+  ##No response, Response status: 204
+ ```
   
 * get /api/v1/walkscore
 
