@@ -213,6 +213,8 @@ or:
   - Get the walkscore for a specific location with required params: 
     - IP address 
 
+
+```
 {
     "data": {
         "id": null,
@@ -223,6 +225,7 @@ or:
         }
     }
 }
+```
 
  * post /api/v1/users
 
