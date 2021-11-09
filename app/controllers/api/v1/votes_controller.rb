@@ -1,7 +1,7 @@
 class Api::V1::VotesController < ApplicationController
   def update
     vote = Vote.find(params[:id])
-
+    require "pry"; binding.pry
     if vote.update(vote_params)
       render json: 200, status: 204
     else
