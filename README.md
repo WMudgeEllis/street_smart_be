@@ -68,6 +68,8 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 
 * get api/v1/hazards/:id
 
+  - Returns information for only one hazard with matching ID
+
 ```
   {
     data:
@@ -98,16 +100,22 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 
 * delete api/v1/hazards/:id
 
-status 204, response:
+
 
 ```
+  status 204, response:
   {
     data: {}
   }
 ```
 * post api/v1/hazards
 
-  Pass in hazard user id, title, description, latitude, and longitude as parameters. Description is optional, the others are required:
+  - Create new hazard with request paramaters 
+    - user ID
+    - Title of Hazard
+    - Description of Hazard (optional)
+    - Latitude
+    - Longitude
 
 ```
   {
@@ -120,7 +128,7 @@ status 204, response:
   }
 ```
 
-status 201, response:
+  - Returns status: 201 with the following response
 
 ```
 {
@@ -152,7 +160,8 @@ status 201, response:
 
 * post api/v1/users
 
-  When creating a new user, send user id as a parameter:
+  - Create new user with following parameters
+    - user id
 
 ```
   {
@@ -160,7 +169,7 @@ status 201, response:
   }
 ```
 
-  status 201, response:
+  - Returns status: 201 with the following response
 
 ```
   {
@@ -173,7 +182,11 @@ status 201, response:
 
 * put api/v1/votes/:id
 
-send in param whether it was an upvote or down vote:
+  - Vote on a specific hazard with the following params
+    - Vote ID
+    - Upvote: 1
+    or 
+    - Downvote: 1
 
 ```
 {
@@ -193,26 +206,28 @@ or:
 
 * delete /api/v1/hazards/:id
 
- ```
-  ##No response, Response status: 204
- ```
+  - No response, HTTP status: 204
   
 * get /api/v1/walkscore
 
-  requires ip address as a parameter
-
-response 
+  - Get the walkscore for a specific location with required params: 
+    - IP address 
 
 {
-  walkscore: integer,
-  description: string
-{
+    "data": {
+        "id": null,
+        "type": "score",
+        "attributes": {
+            "score": integer,
+            "description": string
+        }
+    }
+}
 
  * post /api/v1/users
 
-  User email will be sent in the params.
-  
-  status 201, response:
+  - Create new user with required params: 
+    - user email: string
   
   ```
   {
