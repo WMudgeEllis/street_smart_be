@@ -5,9 +5,12 @@ RSpec.describe 'Vote Update' do
   describe 'PUT api/v1/votes/:id' do
     before :each do
       @user1 = create(:user)
+      @user2 = create(:user)
+      @user3 = create(:user)
       @hazard1 = create(:hazard, user: @user1)
       @vote1 = create(:vote, hazard: @hazard1)
-      @user1vote = create(:user_vote, user:@user1, vote: @vote1)
+      @user1vote = create(:user_vote, user: @user1, vote: @vote1)
+      @user1vote1 = create(:user_vote, user: @user2, vote: @vote1)
       @vote_data = {
         upvote: 34,
         downvote: 55
