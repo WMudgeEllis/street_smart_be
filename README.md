@@ -34,8 +34,10 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 
 <details>
   <summary>Get all hazards</summary>
+  
+  * Method: GET
  
-  * GET api/v1/hazards
+  * Endpoint: api/v1/hazards
   
   * Hazards will be filtered by proximity to current location. Exact distance tbd.
 ```
@@ -69,9 +71,15 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 ```
 </details>
 
-* get api/v1/hazards/:id
 
-  - Returns information for only one hazard with matching ID
+<details>
+  <summary>Get one hazard</summary>
+  
+  * Method: GET
+  
+  * Endpoint: api/v1/hazards/:id
+
+  * Returns information for only one hazard with matching ID
 
 ```
   {
@@ -100,10 +108,11 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
     }
   }
 ```
+</details>
+
+
 
 * delete api/v1/hazards/:id
-
-
 
 ```
   status 204, response:
