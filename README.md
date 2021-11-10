@@ -34,7 +34,9 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 
 <details>
   <summary>Get all hazards</summary>
+ 
   * GET api/v1/hazards
+  
   * Hazards will be filtered by proximity to current location. Exact distance tbd.
 ```
   {
