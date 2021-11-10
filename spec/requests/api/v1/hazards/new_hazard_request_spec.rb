@@ -4,22 +4,20 @@ describe 'New Hazard Request', type: :request do
   describe 'Post /api/v1/hazards' do
     before :each do
       @user1 = create(:user)
-      @body_data = {
+      @body_data = {hazard: {
         title: "bird",
         description: "swallow",
         category: 'animate',
         longitude: "-45.4575",
-        latitude: "67.8980",
-        user_id: "#{@user1.id}"
-      }
-      @shit_body_data = {
+        latitude: "67.8980"
+      }, user_email: "#{@user1.email}"}
+      @shit_body_data = {hazard: {
         title: "",
         description: "",
         category: 'animate',
         longitude: "-45.4575",
-        latitude: "",
-        user_id: "#{@user1.id}"
-      }
+        latitude: ""
+      }, user_email: "#{@user1.email}"}
     end
 
     it 'returns in this json structure' do

@@ -18,7 +18,8 @@ class Api::V1::HazardsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
+    user = User.find_by(email: user_params[:user_email])
+
     hazard = user.hazards.new(hazard_params)
 
     if hazard.save
@@ -43,7 +44,11 @@ class Api::V1::HazardsController < ApplicationController
   private
 
   def hazard_params
-    params.permit(:title, :description, :category, :latitude, :longitude, :user_id)
+    params.require(:hazard).permit(:title, :description, :category, :latitude, :longitude, :user_email)
+  end
+
+  def user_params
+    params.permit(:user_email)
   end
 
   def ip_to_coords
