@@ -18,7 +18,8 @@ class Api::V1::HazardsController < ApplicationController
   end
 
   def create
-    hazard = Hazard.new(hazard_params)
+    user = User.find_by(email: params[:email])
+    hazard = user.hazards.new(hazard_params)
 
     if hazard.save
       vote = Vote.create(hazard_id: hazard.id, upvote: 0, downvote: 0)
