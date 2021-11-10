@@ -44,7 +44,7 @@ class Api::V1::HazardsController < ApplicationController
   private
 
   def hazard_params
-    params.permit(:title, :description, :category, :latitude, :longitude, :user_email)
+    params.permit(:title, :description, :category, :latitude, :longitude)
   end
 
   def user_params
