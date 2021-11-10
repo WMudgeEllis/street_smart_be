@@ -171,29 +171,27 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 ```
 </details>
 
+<details>
+  <summary>Create a new User</summary>
   
+  * Method: POST
+  
+  * Endpoint: api/v1/users
+  
+  * Params for creating a new user
+    - user ID
 
-* post api/v1/users
+  * Returns status 201 with the following JSON response: 
 
-  - Create new user with following parameters
-    - user id
-
-```
-  {
-    id: string
-  }
-```
-
-  - Returns status: 201 with the following response
-
-```
+  ```
   {
     data: {
       id: string,
       type: user
     }
   }
-```
+```  
+</details>
 
 * put api/v1/votes/:id
 
