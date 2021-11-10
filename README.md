@@ -193,65 +193,27 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 ```  
 </details>
 
-* put api/v1/votes/:id
 
-  - Vote on a specific hazard with the following params
-    - Vote ID
+<details>
+  <summary>Vote on a Hazard</summary>
+  
+  * Method: PUT
+  
+  * Endpoint: api/v1/votes/:id
+  
+  * Params for voting on a hazard: 
+    - Hazard ID
     - Upvote: 1
-    or 
+    or
     - Downvote: 1
-
-```
-{
-  id: string,
-  upvote: integer
-}
-```
-
-or:
-
-```
-{
-  id: string,
-  downvote: integer
-}
-```
-
-* delete /api/v1/hazards/:id
-
-  - No response, HTTP status: 204
   
-* get /api/v1/walkscore
-
-  - Get the walkscore for a specific location with required params: 
-    - IP address 
-
-
-```
-{
-    "data": {
-        "id": null,
-        "type": "score",
-        "attributes": {
-            "score": integer,
-            "description": string
-        }
-    }
-}
-```
-
- * post /api/v1/users
-
-  - Create new user with required params: 
-    - user email: string
+  * Returns status 201 with the Following JSON response: 
   
   ```
-  {
-    data: {
-      user_email: string
-    }
-  }
-  ```
+    Still need to get this
+  ``` 
+</details> 
+
   
   ### Contact Info 
   
