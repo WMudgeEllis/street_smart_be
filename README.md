@@ -110,38 +110,38 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 ```
 </details>
 
-
-
-* delete api/v1/hazards/:id
-
+<details>
+  <summary> Delete a hazard</summary>
+  
+  * Method: DELETE 
+  
+  * Endpoint: api/v1/hazards/:id
+  
+  * Returns status 204 with the following JSON response
+  
 ```
-  status 204, response:
   {
     data: {}
   }
-```
-* post api/v1/hazards
+```  
+</details>
 
-  - Create new hazard with request paramaters 
+<details> 
+  <summary>Create a New Hazard</summary>
+  
+  * Method: POST
+  
+  * Endpoint:  api/v1/hazards
+
+  * Params for creating a new hazard
     - user ID
     - Title of Hazard
     - Description of Hazard (optional)
     - Latitude
     - Longitude
-
-```
-  {
-    title: string,
-    description: string,
-    latitude: string,
-    longitude: string,
-    category: integer,
-    user_email: string
-  }
-```
-
-  - Returns status: 201 with the following response
-
+  
+  * Returns 201 status with  the following JSON response
+  
 ```
 {
   data:
@@ -169,6 +169,9 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
   }
 }
 ```
+</details>
+
+  
 
 * post api/v1/users
 
