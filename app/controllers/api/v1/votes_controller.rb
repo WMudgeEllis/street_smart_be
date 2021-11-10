@@ -1,7 +1,7 @@
 class Api::V1::VotesController < ApplicationController
   def update
     vote = Vote.find(params[:id])
-    user = User.find_by(email: params[:email])
+    user = User.find_by(email: params[:user_email])
     user_vote = UserVote.find_by(user_id:user.id, vote_id: vote.id)
     if user_vote.nil?
       vote.update(vote_params)
