@@ -19,6 +19,7 @@ class Api::V1::HazardsController < ApplicationController
 
   def create
     user = User.find_by(email: user_params[:user_email])
+
     hazard = user.hazards.new(hazard_params)
 
     if hazard.save
