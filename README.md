@@ -5,8 +5,7 @@ This is the back end repository for the project street smart. The front repo is 
 The base url for the production server is https://street-smart-be.herokuapp.com
 
 
-schema : ![Screen Shot 2021-11-11 at 12 49 02 PM](https://user-images.githubusercontent.com/75844153/141345211-587e2040-cd44-4f28-b09a-5bebc487bfba.png)
-
+schema : ![Screen Shot 2021-11-11 at 12 51 10 PM](https://user-images.githubusercontent.com/75844153/141345470-2622e476-58c8-41ff-b30e-e138c03100e3.png)
 
 * Ruby/Rails versions
 
