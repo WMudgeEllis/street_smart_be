@@ -6,6 +6,9 @@ describe 'New User Request', type: :request do
       @body_data = {
         user_email: 'doggy@gmail.com'
       }
+      @bad_body_data = {
+        user_email: " "
+      }
     end
 
     it 'returns in this json structure' do
@@ -18,8 +21,13 @@ describe 'New User Request', type: :request do
     end
 
     it 'can return a 404 if null fields' do
-      post '/api/v1/hazards', params: @shit_body_data
-      expect(response).to_not be_successful
+      post '/api/v1/users', params: @bad_body_data
+      expect(response.status).to eq(404)
     end
+    it 'can return a 404 if no params passed' do
+      post '/api/v1/users'
+      expect(response.status).to eq(404)
+    end
+
   end
 end

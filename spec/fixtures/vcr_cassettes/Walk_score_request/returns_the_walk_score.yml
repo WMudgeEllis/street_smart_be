@@ -31,7 +31,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 10 Nov 2021 17:53:38 GMT
+      - Thu, 11 Nov 2021 02:36:48 GMT
       X-Envoy-Upstream-Service-Time:
       - '1'
       Vary:
@@ -55,7 +55,7 @@ http_interactions:
           "timezone": "America/New_York",
           "readme": "https://ipinfo.io/missingauth"
         }
-  recorded_at: Wed, 10 Nov 2021 17:53:38 GMT
+  recorded_at: Thu, 11 Nov 2021 02:36:48 GMT
 - request:
     method: get
     uri: https://nominatim.openstreetmap.org/reverse?accept-language=en&addressdetails=1&format=json&lat=35.1677&lon=-80.7932
@@ -77,7 +77,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 10 Nov 2021 17:53:39 GMT
+      - Thu, 11 Nov 2021 02:36:48 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -94,10 +94,10 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJwbGFjZV9pZCI6MjkyODExMjcyLCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6MTY3MTI1MTcsImxhdCI6IjM1LjE2NzEyMjQ0OTkwNDUyNSIsImxvbiI6Ii04MC43OTMwNzM4OTcyNDY1NCIsImRpc3BsYXlfbmFtZSI6IjE3OSwgV29uZGVyd29vZCBEcml2ZSwgU2hlcndvb2QgRm9yZXN0LCBDaGFybG90dGUsIE1lY2tsZW5idXJnIENvdW50eSwgTm9ydGggQ2Fyb2xpbmEsIDI4MjExLCBVbml0ZWQgU3RhdGVzIiwiYWRkcmVzcyI6eyJob3VzZV9udW1iZXIiOiIxNzkiLCJyb2FkIjoiV29uZGVyd29vZCBEcml2ZSIsInN1YnVyYiI6IlNoZXJ3b29kIEZvcmVzdCIsImNpdHkiOiJDaGFybG90dGUiLCJjb3VudHkiOiJNZWNrbGVuYnVyZyBDb3VudHkiLCJzdGF0ZSI6Ik5vcnRoIENhcm9saW5hIiwicG9zdGNvZGUiOiIyODIxMSIsImNvdW50cnkiOiJVbml0ZWQgU3RhdGVzIiwiY291bnRyeV9jb2RlIjoidXMifSwiYm91bmRpbmdib3giOlsiMzUuMTY3MDcyNDQ5OTA1IiwiMzUuMTY3MTcyNDQ5OTA1IiwiLTgwLjc5MzEyMzg5NzI0NyIsIi04MC43OTMwMjM4OTcyNDciXX0=
-  recorded_at: Wed, 10 Nov 2021 17:53:39 GMT
+  recorded_at: Thu, 11 Nov 2021 02:36:48 GMT
 - request:
     method: get
-    uri: https://api.walkscore.com/score?address=&format=json&lat=35.1677&lon=-80.7932&wsapikey=<api_key>
+    uri: https://api.walkscore.com/score?format=json&lat=35.1677&lon=-80.7932&wsapikey=<api_key>
     body:
       encoding: US-ASCII
       string: ''
@@ -116,13 +116,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       Expires:
-      - Thu, 11 Nov 2021 17:53:39 GMT
+      - Fri, 12 Nov 2021 02:36:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       X-Cloud-Trace-Context:
-      - dae4469be6e12ae9d79ef4136ab7f01c
+      - b5d47baa9d66c74028fb263e8b51f3fa
       Date:
-      - Wed, 10 Nov 2021 17:53:39 GMT
+      - Thu, 11 Nov 2021 02:36:48 GMT
       Server:
       - Google Frontend
       Content-Length:
@@ -135,5 +135,5 @@ http_interactions:
         \"https://www.redfin.com/how-walk-score-works\"\n, \"ws_link\": \"https://www.walkscore.com/score/loc/lat=35.1677/lng=-80.7932/?utm_source=idaolson.com&utm_medium=ws_api&utm_campaign=ws_api\"\n,
         \"help_link\": \"https://www.redfin.com/how-walk-score-works\"\n, \"snapped_lat\":
         35.1675\n, \"snapped_lon\": -80.7930 \n\n\n\n\n\n}"
-  recorded_at: Wed, 10 Nov 2021 17:53:39 GMT
+  recorded_at: Thu, 11 Nov 2021 02:36:48 GMT
 recorded_with: VCR 6.0.0
