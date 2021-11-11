@@ -239,8 +239,8 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
         "id": null,
         "type": "score",
         "attributes": {
-            "score": 19,
-            "description": "Car-Dependent"
+            "score": integer,
+            "description": string
         }
      }
   }
