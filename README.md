@@ -21,10 +21,7 @@ If you would like to visit our front-end production environment, you can acees i
   
 ### Languages:
 ![ActiveRecord](https://img.shields.io/badge/ActiveRecord-CC0000.svg?&style=flaste&logo=rubyonrails&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6.svg?&style=flaste&logo=css3&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-0EB201.svg?&style=flaste&logo=html5&logoColor=white)
 ![Ruby](https://img.shields.io/badge/Ruby-CC0000.svg?&style=flaste&logo=ruby&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 ### Deployment Tools:
 ![Heroku](https://img.shields.io/badge/Heroku-430098.svg?&style=flaste&logo=heroku&logoColor=white)
