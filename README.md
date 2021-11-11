@@ -16,17 +16,25 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
 
   [figaro](https://github.com/laserlemon/figaro), [fast_jsonapi](https://github.com/Netflix/fast_jsonapi), [faraday](https://lostisland.github.io/faraday/), [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers), [pry](https://github.com/pry/pry), [simplecov](https://github.com/simplecov-ruby/simplecov), [factory_bot](https://github.com/thoughtbot/factory_bot), [faker](https://github.com/faker-ruby/faker), [webmock](https://github.com/bblimke/webmock), [vcr](https://github.com/vcr/vcr), [geo-kit](https://github.com/geokit/geokit-rails)
 
-* Configuration
+* Deployment instructions
 
-* Database creation
-
-* Database initialization
-
+  ``` 
+  git clone git@github.com:WMudgeEllis/street_smart_be.git
+  
+  bundle install 
+  
+  rake db:{create,migrate}
+  
+  bundle exec install figaro
+  
+  ```
+  
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+ `bundle exec rspec`
 
-* Deployment instructions
+  
+  A walkscore API will need to acquired and added to the `config/application.yml` documentation for the WalkScore API can be found [here](https://www.walkscore.com/professional/api.php)
 
 ### API Endpoints
 
