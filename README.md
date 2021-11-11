@@ -33,7 +33,7 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
   
 * How to run the test suite
 
- `bundle exec rspec`
+  `bundle exec rspec`
 
 ### API Endpoints
 
