@@ -220,6 +220,33 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
   ``` 
 </details> 
 
+
+<details>
+  <summary>Walkscore Safety Information</summary>
+  
+  * Method: GET 
+  
+  * Endpoint: api/v1/walkscore
+  
+  * Params for getting a walkscore
+    - IP: string
+  
+  Returns the following JSON response
+  
+  ```
+  {
+    "data": {
+        "id": null,
+        "type": "score",
+        "attributes": {
+            "score": 19,
+            "description": "Car-Dependent"
+        }
+     }
+  }
+  ```
+</details>
+
   
   ### Contact Info 
   
