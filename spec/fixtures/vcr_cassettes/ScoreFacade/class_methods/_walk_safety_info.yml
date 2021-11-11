@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.walkscore.com/score?address=1119%258th%20Avenue%20Seattle%20WA%2098101&format=json&lat=47.6085&lon=-122.3295&wsapikey=<api_key>
+    uri: https://api.walkscore.com/score?format=json&lat=47.6085&lon=-122.3295&wsapikey=<api_key>
     body:
       encoding: US-ASCII
       string: ''
@@ -21,25 +21,25 @@ http_interactions:
       Cache-Control:
       - no-cache
       Expires:
-      - Tue, 09 Nov 2021 23:34:59 GMT
+      - Fri, 12 Nov 2021 02:36:47 GMT
       Content-Type:
       - application/json; charset=utf-8
       X-Cloud-Trace-Context:
-      - 803bff3dc493c226e445ce787d9d5f8d
+      - f4e0f56e60951fee2b417eea7cbe35df
       Date:
-      - Mon, 08 Nov 2021 23:34:59 GMT
+      - Thu, 11 Nov 2021 02:36:47 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '592'
+      - '563'
     body:
       encoding: UTF-8
       string: "{\n\"status\": 1  \n, \"walkscore\": 99\n, \"description\": \"Walker's
         Paradise\"\n, \"updated\": \"2021-05-19 20:53:56.207685\" \n, \"logo_url\":
         \"https://cdn.walk.sc/images/api-logo.png\"\n, \"more_info_icon\": \"https://cdn.walk.sc/images/api-more-info.gif\"\n,
         \"more_info_link\": \"https://www.redfin.com/how-walk-score-works\"\n, \"ws_link\":
-        \"https://www.walkscore.com/score/1119-8th-Avenue-Seattle-WA-98101/lat=47.6085/lng=-122.3295/?utm_source=idaolson.com&utm_medium=ws_api&utm_campaign=ws_api\"\n,
+        \"https://www.walkscore.com/score/loc/lat=47.6085/lng=-122.3295/?utm_source=idaolson.com&utm_medium=ws_api&utm_campaign=ws_api\"\n,
         \"help_link\": \"https://www.redfin.com/how-walk-score-works\"\n, \"snapped_lat\":
         47.6085\n, \"snapped_lon\": -122.3295 \n\n\n\n\n\n}"
-  recorded_at: Mon, 08 Nov 2021 23:34:58 GMT
+  recorded_at: Thu, 11 Nov 2021 02:36:47 GMT
 recorded_with: VCR 6.0.0

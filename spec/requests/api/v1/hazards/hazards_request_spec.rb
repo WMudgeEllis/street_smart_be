@@ -4,14 +4,14 @@ describe 'Hazards Requests', type: :request do
   describe 'GET /api/v1/hazards' do
     before :each do
       @user1 = create(:user)
-      @hazards = create_list(:hazard, 20, user: @user1)
+      @hazards = create_list(:hazard, 20, user: @user1, latitude: '39.7294', longitude: '-104.8319' )
       @hazards.each do |hazard|
         create(:vote, upvote: 0, downvote: 0, hazard: hazard)
       end
     end
 
-    it 'returns all hazards' do
-      get '/api/v1/hazards'
+    it 'returns all hazards', :vcr do
+      get '/api/v1/hazards', params: {ip: '73.153.17.177'}
 
       expect(response).to be_successful
       response_body = JSON.parse(response.body, symbolize_names: true)

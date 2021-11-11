@@ -4,14 +4,15 @@ describe 'New Hazard Request', type: :request do
   describe 'Post /api/v1/hazards' do
     before :each do
       @user1 = create(:user)
-      @body_data = {hazard: {
+      @body_data = {
         title: "bird",
         description: "swallow",
         category: 'animate',
         longitude: "-45.4575",
-        latitude: "67.8980"
-      }, user_email: "#{@user1.email}"}
-      @shit_body_data = {hazard: {
+        latitude: "67.8980",
+        user_email: "#{@user1.email}"
+      }
+      @bad_body_data = {hazard: {
         title: "",
         description: "",
         category: 'animate',
@@ -38,8 +39,9 @@ describe 'New Hazard Request', type: :request do
     end
 
     it 'can return a 404 if null fields' do
-      post '/api/v1/hazards', params: @shit_body_data
+      post '/api/v1/hazards', params: @bad_body_data
       expect(response).to_not be_successful
+      expect(response.status).to eq(404)
     end
   end
 end
