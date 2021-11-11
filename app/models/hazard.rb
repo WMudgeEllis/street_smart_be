@@ -1,6 +1,6 @@
 class Hazard < ApplicationRecord
   belongs_to :user
-  has_one :vote, dependent: :destroy
+  has_one :vote, dependent: :delete_all
 
   attr_accessor :vote_data
 
