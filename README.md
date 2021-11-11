@@ -1,9 +1,10 @@
 # Street Smart Back End Application
 
-This is the back end repository for the project street smart. The front repo is [here](https://github.com/WMudgeEllis/street_smart_fe). This repository is responsible for storing and serving data to the front end which then presents the information. This follows json api format. 
+This is the back end repository for the project street smart. The front repo is [here](https://github.com/WMudgeEllis/street_smart_fe). This repository is responsible for storing and serving data to the front end application which handles the presentation of data. All endpoints follow JSON API spec. There is no authorization needed to access the endpoints in this repository, but some endpoints rely on data from external APIs that require authorization. More information on these endpoints and the necessary credentials can be found in the deployment instructions. 
 
 The base url for the production server is https://street-smart-be.herokuapp.com
 
+If you would like to visit our front-end production environment, you can acees it [here](t-smart-fe.herokuapp.com)
 
 schema : ![Screen Shot 2021-11-11 at 12 51 10 PM](https://user-images.githubusercontent.com/75844153/141345470-2622e476-58c8-41ff-b30e-e138c03100e3.png)
 
