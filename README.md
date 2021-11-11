@@ -6,31 +6,33 @@ The base url for the production server is https://street-smart-be.herokuapp.com
 
 If you would like to visit our front-end production environment, you can acees it [here](t-smart-fe.herokuapp.com)
 
-schema : ![Screen Shot 2021-11-11 at 12 51 10 PM](https://user-images.githubusercontent.com/75844153/141345470-2622e476-58c8-41ff-b30e-e138c03100e3.png)
+### Schema
 
-* Ruby/Rails versions
+![Screen Shot 2021-11-11 at 12 51 10 PM](https://user-images.githubusercontent.com/75844153/141345470-2622e476-58c8-41ff-b30e-e138c03100e3.png)
+
+### Ruby/Rails versions
 
   - Ruby 2.7.2
   - Rails 5.2.6
 
-* Gem Documentation:
+### Gem Documentation:
 
   [figaro](https://github.com/laserlemon/figaro), [fast_jsonapi](https://github.com/Netflix/fast_jsonapi), [faraday](https://lostisland.github.io/faraday/), [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers), [pry](https://github.com/pry/pry), [simplecov](https://github.com/simplecov-ruby/simplecov), [factory_bot](https://github.com/thoughtbot/factory_bot), [faker](https://github.com/faker-ruby/faker), [webmock](https://github.com/bblimke/webmock), [vcr](https://github.com/vcr/vcr), [geo-kit](https://github.com/geokit/geokit-rails)
   
-* Languages:
+### Languages:
 ![ActiveRecord](https://img.shields.io/badge/ActiveRecord-CC0000.svg?&style=flaste&logo=rubyonrails&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6.svg?&style=flaste&logo=css3&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-0EB201.svg?&style=flaste&logo=html5&logoColor=white)
 ![Ruby](https://img.shields.io/badge/Ruby-CC0000.svg?&style=flaste&logo=ruby&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-* Deployment Tools:
+### Deployment Tools:
 ![Heroku](https://img.shields.io/badge/Heroku-430098.svg?&style=flaste&logo=heroku&logoColor=white)
 ![Circle CI](https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white)
 ![Faraday](https://img.shields.io/badge/faraday-b81818.svg?&style=flaste&logo=rubygems&logoColor=white)
 
 
-* Deployment instructions
+### Deployment instructions
 
   ``` 
   git clone git@github.com:WMudgeEllis/street_smart_be.git
@@ -45,7 +47,7 @@ schema : ![Screen Shot 2021-11-11 at 12 51 10 PM](https://user-images.githubuser
   
   A walkscore API will need to acquired and added to the `config/application.yml` documentation for the WalkScore API can be found [here](https://www.walkscore.com/professional/api.php)
   
-* How to run the test suite
+### How to run the test suite
 
   `bundle exec rspec`
 
