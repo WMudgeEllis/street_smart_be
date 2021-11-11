@@ -29,12 +29,11 @@ schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubuser
   
   ```
   
+  A walkscore API will need to acquired and added to the `config/application.yml` documentation for the WalkScore API can be found [here](https://www.walkscore.com/professional/api.php)
+  
 * How to run the test suite
 
  `bundle exec rspec`
-
-  
-  A walkscore API will need to acquired and added to the `config/application.yml` documentation for the WalkScore API can be found [here](https://www.walkscore.com/professional/api.php)
 
 ### API Endpoints
 
