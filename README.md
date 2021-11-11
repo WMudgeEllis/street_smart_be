@@ -8,9 +8,10 @@ The base url for the production server is https://street-smart-be.herokuapp.com
 schema : ![Screen Shot 2021-11-04 at 11 45 33 AM](https://user-images.githubusercontent.com/84806907/140391938-a9eb5abd-db83-4c5e-a295-b6ea2c230f65.png)
 
 
-* Ruby version
+* Ruby/Rails versions
 
-  Ruby 2.7.2, Rails 5.2.6
+  - Ruby 2.7.2
+  - Rails 5.2.6
 
 * Gems used:
 
