@@ -17,7 +17,17 @@ If you would like to visit our front-end production environment, you can acees i
 
 ### Gem Documentation:
 
-  [figaro](https://github.com/laserlemon/figaro), [fast_jsonapi](https://github.com/Netflix/fast_jsonapi), [faraday](https://lostisland.github.io/faraday/), [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers), [pry](https://github.com/pry/pry), [simplecov](https://github.com/simplecov-ruby/simplecov), [factory_bot](https://github.com/thoughtbot/factory_bot), [faker](https://github.com/faker-ruby/faker), [webmock](https://github.com/bblimke/webmock), [vcr](https://github.com/vcr/vcr), [geo-kit](https://github.com/geokit/geokit-rails)
+  -  [figaro](https://github.com/laserlemon/figaro)
+  -  [fast_jsonapi](https://github.com/Netflix/fast_jsonapi)
+  -  [faraday](https://lostisland.github.io/faraday/)
+  -  [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers)
+  -  [pry](https://github.com/pry/pry)
+  -  [simplecov](https://github.com/simplecov-ruby/simplecov)
+  -  [factory_bot](https://github.com/thoughtbot/factory_bot)
+  -  [faker](https://github.com/faker-ruby/faker)
+  -  [webmock](https://github.com/bblimke/webmock)
+  -  [vcr](https://github.com/vcr/vcr)'
+  -  [geocoder](https://github.com/alexreisner/geocoder)
   
 ### Languages:
 ![ActiveRecord](https://img.shields.io/badge/ActiveRecord-CC0000.svg?&style=flaste&logo=rubyonrails&logoColor=white)
