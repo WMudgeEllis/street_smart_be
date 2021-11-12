@@ -38,6 +38,14 @@ If you would like to visit our front-end production environment, you can acees i
 ![Circle CI](https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white)
 ![Faraday](https://img.shields.io/badge/faraday-b81818.svg?&style=flaste&logo=rubygems&logoColor=white)
 
+#### Development Principles
+<p>
+  <img src="https://img.shields.io/badge/OOP-b81818.svg?&style=flaste&logo=OOP&logoColor=white" />
+  <img src="https://img.shields.io/badge/TDD-b87818.svg?&style=flaste&logo=TDD&logoColor=white" />
+  <img src="https://img.shields.io/badge/MVC-b8b018.svg?&style=flaste&logo=MVC&logoColor=white" />
+  <img src="https://img.shields.io/badge/REST-33b818.svg?&style=flaste&logo=REST&logoColor=white" />  
+</p>
+
 
 ### Deployment instructions
 
